@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000, #191970, #000000); /* Colores de fondo */
+    opacity: 0.5; /* Opacidad del fondo */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+  }
+  
+  /* Animación */
+  @keyframes moveBubble {
+    0% { 
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .background::before {
+    content: '';
+    position: absolute;
+    width: 200px; /* Tamaño de la burbuja */
+    height: 200px; /* Tamaño de la burbuja */
+    border-radius: 50%; /* Forma circular */
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%); /* Gradiente difuso */
+    animation: moveBubble 5s infinite; /* Animación */
+  }
+  
