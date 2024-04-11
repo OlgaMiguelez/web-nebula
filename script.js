@@ -7,10 +7,10 @@ canvas.height = window.innerHeight;
 const particles = [];
 const particleCount = 1200;
 const maxRadius = 3;
-const maxSpeed = 1; // Aumentado para un movimiento más definido hacia el cursor
+const maxSpeed = 1;
 const defaultSpeed = 0.5;
 
-let mouseX = window.innerWidth / 2; // Aparecer en el centro de la pantalla
+let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 let isCursorMoving = false;
 
@@ -20,11 +20,9 @@ function randomInRange(min, max) {
 
 class Particle {
   constructor() {
-    // Inicializar en el centro de la pantalla
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
     this.radius = randomInRange(0.2, maxRadius);
-    // Movimiento inicial aleatorio
     this.speedX = randomInRange(-0.3, 0.3);
     this.speedY = randomInRange(-0.3, 0.3);
     this.opacity = randomInRange(0.5, 1);
@@ -48,17 +46,9 @@ class Particle {
       }
     }
 
-    // Rebote en los bordes
-    if (this.x < 0 || this.x > canvas.width) {
-      this.speedX *= -1;
-    }
-
-    if (this.y < 0 || this.y > canvas.height) {
-      this.speedY *= -1;
-    }
-
-    this.x += this.speedX;
-    this.y += this.speedY;
+    // Limitar la posición dentro de los límites de la pantalla
+    this.x = Math.max(0, Math.min(this.x + this.speedX, canvas.width));
+    this.y = Math.max(0, Math.min(this.y + this.speedY, canvas.height));
   }
 
   updateSpeed() {
