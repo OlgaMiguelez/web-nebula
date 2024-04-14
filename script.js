@@ -5,10 +5,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particles = [];
-const particleCount = 1200;
-const maxRadius = 3;
+const particleCount = 1500;
+const maxRadius = 2;
 const maxSpeed = 1;
-const defaultSpeed = 0.5;
+const defaultSpeed = 0.2;
 
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
@@ -22,16 +22,21 @@ class Particle {
   constructor() {
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
-    this.radius = randomInRange(0.2, maxRadius);
-    this.speedX = randomInRange(-0.3, 0.3);
-    this.speedY = randomInRange(-0.3, 0.3);
-    this.opacity = randomInRange(0.5, 1);
+    this.radius = randomInRange(0.5, maxRadius);
+    this.speedX = randomInRange(-1, 2);
+    this.speedY = randomInRange(-2, 2);
+    this.opacity = randomInRange(0.4, 1);
+    this.color = {
+      r: 98,
+      g: 32,
+      b: 251
+    }; // Color inicial
   }
 
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+    ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`;
     ctx.fill();
   }
 
@@ -49,13 +54,18 @@ class Particle {
     // Limitar la posición dentro de los límites de la pantalla
     this.x = Math.max(0, Math.min(this.x + this.speedX, canvas.width));
     this.y = Math.max(0, Math.min(this.y + this.speedY, canvas.height));
+
+    // Cambiar gradualmente el color
+    this.color.r = Math.round(Math.abs(Math.sin(Date.now() / 1000)) * 255);
+    this.color.g = Math.round(Math.abs(Math.cos(Date.now() / 1000)) * 255);
+    this.color.b = Math.round(Math.abs(Math.sin(Date.now() / 2000)) * 255);
   }
 
   updateSpeed() {
     const deltaX = mouseX - this.x;
     const deltaY = mouseY - this.y;
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    if (distance < 10) {
+    if (distance < 20) {
       const speedRatio = (20 - distance) / 20;
       this.speedX += maxSpeed * (deltaX / distance) * speedRatio;
       this.speedY += maxSpeed * (deltaY / distance) * speedRatio;
