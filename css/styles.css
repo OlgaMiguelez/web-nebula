@@ -1,6 +1,32 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: "roc-grotesk", sans-serif;
+font-weight: 300;
+font-style: normal;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1; 
+  }
+
+  h1{
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    margin: 0;
+
+  }
+
+  p{
+    font-size: 16px;
   }
   
   canvas {
@@ -13,3 +39,51 @@ body, html {
     background-color: #000; /* Fondo negro */
   }
 
+
+  button {
+    --glow-color: rgba(218, 203, 255, 0.907);
+    --glow-spread-color: rgba(98, 38, 251, 0.71);
+    --enhanced-glow-color: rgb(114, 102, 255);
+    --btn-color: rgba(0, 0, 0, 0);
+    border: .10em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 2em;
+    outline: none;
+    box-shadow: 0 0 1em .14em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .2em .14em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 140%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    color: var( --btn-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   button:hover {
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .14em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .45em .14em var(--glow-color);
+    color: black;
+   }
+   button:active {
+
+    box-shadow: 0 0 0.6em .14em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .14em var(--glow-color);
+   }

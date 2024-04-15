@@ -5,8 +5,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particles = [];
-const particleCount = 1500;
-const maxRadius = 2;
+const particleCount = 2500;
+const maxRadius = 2.5;
 const maxSpeed = 1;
 const defaultSpeed = 0.2;
 
@@ -22,10 +22,10 @@ class Particle {
   constructor() {
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
-    this.radius = randomInRange(0.5, maxRadius);
+    this.radius = randomInRange(0.9, maxRadius);
     this.speedX = randomInRange(-1, 2);
     this.speedY = randomInRange(-2, 2);
-    this.opacity = randomInRange(0.4, 1);
+    this.opacity = randomInRange(0.5, 1);
     this.color = {
       r: 98,
       g: 32,
@@ -45,7 +45,7 @@ class Particle {
       const deltaX = mouseX - this.x;
       const deltaY = mouseY - this.y;
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-      if (distance > 20) {
+      if (distance > 15) {
         this.speedX += defaultSpeed * (deltaX / distance);
         this.speedY += defaultSpeed * (deltaY / distance);
       }
@@ -65,8 +65,8 @@ class Particle {
     const deltaX = mouseX - this.x;
     const deltaY = mouseY - this.y;
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    if (distance < 20) {
-      const speedRatio = (20 - distance) / 20;
+    if (distance < 15) {
+      const speedRatio = (15 - distance) / 15;
       this.speedX += maxSpeed * (deltaX / distance) * speedRatio;
       this.speedY += maxSpeed * (deltaY / distance) * speedRatio;
     }
@@ -98,7 +98,7 @@ window.addEventListener('mousemove', (e) => {
   isCursorMoving = true;
   setTimeout(() => {
     isCursorMoving = false;
-  }, 20);
+  }, 10);
 });
 
 window.addEventListener('resize', () => {
