@@ -29,6 +29,51 @@ font-style: normal;
     font-size: 16px;
   }
   
+/* Menu*/
+.menu {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 20px 0; 
+  color: #fff; 
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px; 
+}
+
+nav ul li:first-child {
+  margin-left: 0; 
+}
+
+nav ul li a {
+  color: #fff; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+  color:  rgb(114, 102, 255); 
+}
+
+
   canvas {
     position: fixed;
     top: 0;
