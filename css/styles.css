@@ -6,6 +6,7 @@ font-weight: 300;
 font-style: normal;
   }
 
+
   .content {
     position: absolute;
     top: 50%;
@@ -132,3 +133,62 @@ nav ul li a:hover {
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .14em var(--glow-color);
    }
+
+
+   .arrow {
+    position: absolute;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior según sea necesario */
+    left: 50%;
+    transform: translateX(-80%);
+  }
+  
+  .arrow-button > svg {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .arrow-button > svg:hover {
+    transform: translateY(-10px); /* Desplaza ligeramente hacia arriba al pasar el ratón sobre él */
+  }
+  
+  
+
+   /* Sobre nosotros*/
+#about{
+  padding-top:  850px;
+  padding-bottom: 420px;
+}
+
+.glass-container {
+  max-width: 1100px; 
+  margin: 0 auto; 
+  text-align: center;
+background: rgba(255, 255, 255, 0.106);
+border-radius: 16px;
+box-shadow: 0 4px 10px rgba(255, 255, 255, 0.511);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+border: 0.5px solid rgba(255, 255, 255, 0.275);
+}
+
+h2 {
+  font-weight: 400;
+    font-size: 2.5em; 
+    margin-bottom: 10px; 
+    padding: 0.5em;
+    color: rgba(255, 255, 255 );
+    
+}
+
+p {
+    font-size: 1.2em; 
+    line-height: 1.5; 
+    padding: 0.8em;
+    color: rgba(255, 255, 255 );
+}
+
+   /* Footer*/

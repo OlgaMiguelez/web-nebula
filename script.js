@@ -105,3 +105,12 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+
+ // flecha
+
+ function scrollToAbout() {
+  const aboutUsSection = document.getElementById('about-us');
+  const offset = aboutUsSection.offsetTop - window.innerHeight / 2 + aboutUsSection.offsetHeight / 2;
+  window.scrollTo({ top: offset, behavior: 'smooth' });
+}
