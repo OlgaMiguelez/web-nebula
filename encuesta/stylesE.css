@@ -11,7 +11,7 @@ body, html {
     font-family: "roc-grotesk", sans-serif;
 font-weight: 300;
 font-style: normal;
-color: black;
+color: white;
 text-align: center;
 display: flex;
 justify-content: center;
@@ -54,7 +54,7 @@ justify-content: center;
 
 /* Estilos tipo de pregunta 1: selección de imágenes*/
 
-#question1{
+.question-img{
     position: absolute;
     top: 0;
     left: 0;
@@ -64,18 +64,18 @@ justify-content: center;
 
 }
 
-#question1 > img{
+.question-img > img{
     margin-top: 80px;
     margin-bottom: 3px;
     height: 120px;
     animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+   filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
 }
 
-#question1 > p{
+.question-img> p{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.2em;
-
 }
 
 
@@ -111,32 +111,12 @@ justify-content: center;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
 }
 
-
-/* Estilos tipo de pregunta 2: selección de audios*/
-#question2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: left 1s;
-}
-
-
-.zonabotones1{
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-
-.menuButton1 {
-    width: 140px;
-    height: 35px;
+.menuButtonReady {
+    width: 190px;
+    height: 45px;
+    margin-top: 30px;
+    margin-left: 320px;
     line-height: 40px;
-    border-radius: 20px;
     background: rgba(255, 255, 255, 0.106);
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
@@ -146,6 +126,64 @@ justify-content: center;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.5s;
 }
+
+.menuButtonReady:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButtonReady:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+/* Estilos tipo de pregunta 2: selección de audios*/
+.question-audio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left 1s;
+}
+.question-audio > img{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    height: 120px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
+}
+.question-audio> p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+
+}
+
+.zonabotones1{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+
+.menuButton1 {
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+
 
 .menuButton1:hover {
     background-color: rgba(240, 239, 239, 0.611);
@@ -157,7 +195,8 @@ justify-content: center;
 
 
 /* Estilos tipo de pregunta 3: selección de palabras en base a un audio*/
-#question3{
+
+.question-palabras{
     position: absolute;
     top: 0;
     left: 0;
@@ -165,15 +204,32 @@ justify-content: center;
     width: 100%;
     transition: left 1s;
 }
+.question-palabras> img{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    height: 120px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
+}
 
+.question-palabras > p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+
+}
 
 .menuButtonA {
-    width: 180px;
-    height: 45px;
-    line-height: 40px;
-    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 65px;
+    margin-left: 180px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.106);
-    border-radius: 16px;
+    border-radius: 46px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(1.5px);
