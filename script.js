@@ -107,5 +107,26 @@ window.addEventListener('resize', () => {
 });
 
 
- // flecha
+ // 3D
 
+// Menú hamburguesa
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navContainer = document.getElementById("nav-container");
+
+  menuIcon.addEventListener("click", function () {
+      menuIcon.classList.toggle("Show");
+      navContainer.classList.toggle("Show");
+  });
+
+  // Cerrar el menú al hacer clic en un elemento dentro del menú
+  const navItems = document.querySelectorAll("#nav-list li");
+  navItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+          menuIcon.classList.remove("Show");
+          navContainer.classList.remove("Show");
+      });
+  });
+});

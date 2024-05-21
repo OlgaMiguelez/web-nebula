@@ -49,6 +49,14 @@ header {
   height: 40px;
 }
 
+.icon > svg{
+  text-align: center;
+}
+
+.icono{
+  display: none;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -160,35 +168,228 @@ nav ul li a:hover {
    /* Sobre nosotros*/
 #about{
   padding-top:  850px;
-  padding-bottom: 420px;
+  padding-bottom: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.col-md-3product-item{
+  display: flex;
+  align-items: center;
+
+}
+.model-viewer{
+padding-left: 20px;
+  width: 400px; /* Puedes ajustar este valor */
+ height: 500px; /* Puedes ajustar este valor */
 }
 
 .glass-container {
-  max-width: 1100px; 
-  margin: 0 auto; 
+  width: 600px;
+  margin: 0; 
   text-align: center;
-background: rgba(255, 255, 255, 0.106);
+background: rgba(255, 255, 255, 0.06);
 border-radius: 16px;
-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.511);
-backdrop-filter: blur(2px);
--webkit-backdrop-filter: blur(2px);
-border: 0.5px solid rgba(255, 255, 255, 0.275);
+box-shadow: 0 4px 10px rgba(255, 255, 255, 0.608);
+backdrop-filter: blur(1px);
+-webkit-backdrop-filter: blur(1px);
+border: 0.5px solid rgba(255, 255, 255, 0.568);
 }
 
 h2 {
   font-weight: 400;
-    font-size: 2.5em; 
-    margin-bottom: 10px; 
-    padding: 0.5em;
+    font-size: 2.1em; 
+    margin-bottom: 3px; 
+    padding: 0.2em;
     color: rgba(255, 255, 255 );
     
 }
 
 p {
-    font-size: 1.2em; 
+    font-size: 0.9em; 
     line-height: 1.5; 
     padding: 0.8em;
     color: rgba(255, 255, 255 );
 }
 
-   /* Footer*/
+ /* Footer */
+  
+ footer{
+  width: auto;
+  padding: 3em;
+  background: linear-gradient(to bottom, rgba(128, 0, 128, 0) 0%, rgba(98, 38, 251, 0.587))
+}
+footer > div > img{
+  width: 180px;
+  height: 50px;
+
+}
+.links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 0.9em; 
+}
+
+.links > div > h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding-top: 0.3em;
+  color: rgba(255, 255, 255 ) ;
+
+}
+
+.links > div > ul >  li{
+  list-style: none;
+  padding-top: 0.3em;
+  color: rgba(255, 255, 255 ) ;
+
+}
+
+.links > div > ul >  li > a:hover {
+  color:  rgb(114, 102, 255);
+
+}
+.redes{
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  color: rgba(255, 255, 255 );
+}
+
+.redes > svg:hover{
+  color:  rgb(114, 102, 255);
+}
+
+   /* Responsive apartado */
+
+
+  @media (max-width: 768px){
+
+
+.menu{
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  align-items: center;
+  width: 100%;
+}
+.logo img {
+  height: 30px;
+}
+
+.icon > svg{
+width: 50px;
+height: 50px;
+padding-top: 1em;
+}
+
+.nav-link{
+font-size: 0.8em;
+}
+#nav-container {
+flex-direction: column;
+position: fixed;
+top: 40px;
+left: 0;
+width: 100%;
+
+}
+
+
+/* Menú hamburguesa*/
+
+#nav-container {
+display: none;
+}
+
+/* Mostrar el icono del menú */
+#menu-icon {
+display: block;
+cursor: pointer; 
+}
+
+/* Mostrar el menú hamburguesa */
+#nav-container.Show {
+display: block;
+flex-direction: column;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 30%;
+background-color: #000000; 
+z-index: 1;
+}
+
+#nav-list {
+list-style: none;
+flex-direction: column;
+padding: 20px;
+}
+
+#nav-list li {
+margin-bottom: 15px;
+}
+
+/*  icono del menú cuando el menú está abierto */
+
+#menu-icon.Show {
+display: block;
+position: fixed;
+color: black; 
+z-index: 1;
+justify-content: flex-start;
+padding: 0.2em;
+
+}
+
+
+/*  TITULO*/
+
+h1{
+  font-size: 3em;
+}
+
+p{
+  font-size: 13px;
+  width: 320px;
+}
+
+/* SOBRE NOSOTROS */
+
+#about{
+  padding-top:  650px;
+  padding-bottom: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.glass-container {
+  width: 300px;
+  padding: 15px;
+}
+
+.model-viewer{
+    width: 200px; /* Puedes ajustar este valor */
+   height: 300px; /* Puedes ajustar este valor */
+  }
+
+
+  footer > div {
+    flex-direction: column;
+}
+
+.redes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2px;
+}
+
+  }
