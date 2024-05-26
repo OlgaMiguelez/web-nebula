@@ -146,8 +146,8 @@ nav ul li a:hover {
            color: black;
    }
 
-   button > a:hover{
-    color: black;
+   button>a:hover{
+           color: black;
    }
 
    button:active {
