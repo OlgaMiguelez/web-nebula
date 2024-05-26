@@ -51,11 +51,11 @@ class Particle {
       }
     }
 
-    // Limitar la posición dentro de los límites de la pantalla
+    // posición dentro de los límites de la pantalla
     this.x = Math.max(0, Math.min(this.x + this.speedX, canvas.width));
     this.y = Math.max(0, Math.min(this.y + this.speedY, canvas.height));
 
-    // Cambiar gradualmente el color
+    // Cambiar  el color
     this.color.r = Math.round(Math.abs(Math.sin(Date.now() / 1000)) * 255);
     this.color.g = Math.round(Math.abs(Math.cos(Date.now() / 1000)) * 255);
     this.color.b = Math.round(Math.abs(Math.sin(Date.now() / 2000)) * 255);
@@ -130,3 +130,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+

@@ -95,6 +95,7 @@ nav ul li a:hover {
 
 
   button {
+    list-style: none;
     --glow-color: rgba(218, 203, 255, 0.907);
     --glow-spread-color: rgba(98, 38, 251, 0.71);
     --enhanced-glow-color: rgb(114, 102, 255);
@@ -114,6 +115,7 @@ nav ul li a:hover {
     position: relative;
     transition: all 0.3s;
    }
+
    button::after {
     pointer-events: none;
     content: "";
@@ -133,10 +135,14 @@ nav ul li a:hover {
     box-shadow: 0 0 1em .14em var(--glow-color),
            0 0 4em 2em var(--glow-spread-color),
            inset 0 0 .45em .14em var(--glow-color);
+           color: black;
+   }
+
+   button > a:hover{
     color: black;
    }
-   button:active {
 
+   button:active {
     box-shadow: 0 0 0.6em .14em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .14em var(--glow-color);

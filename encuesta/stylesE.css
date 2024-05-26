@@ -258,7 +258,7 @@ justify-content: center;
     margin-right: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 
@@ -284,6 +284,22 @@ justify-content: center;
 
 .menuButton2:active {
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+#mainMenu3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left 1s;
+}
+
+#mainMenu3 > h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
 }
 
 /*Responsive*/
@@ -373,6 +389,11 @@ justify-content: center;
 
 }
 
+.menuButton1 > svg{
+    width: 6em;
+     height: 1.5em;
+}
+
   /*Palabras*/
 
 .question-palabras> img{
@@ -395,14 +416,16 @@ justify-content: center;
     
 }
 
-
-
 .menuButton2 {
-    width: 110px;
+    width: 100px;
     height: 25px;
     margin-bottom: 10px;
     line-height: 30px;
-   
+   border-radius: 20px;
+}
+.menuButtonA > svg{
+    width: 6em;
+     height: 1.8em;
 }
 
 }
