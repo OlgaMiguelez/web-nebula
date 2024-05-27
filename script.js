@@ -107,7 +107,6 @@ window.addEventListener('resize', () => {
 });
 
 
- // 3D
 
 // Menú hamburguesa
 

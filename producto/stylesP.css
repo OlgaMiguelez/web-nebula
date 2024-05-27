@@ -82,7 +82,7 @@ p{
 }
 
 .model-viewer{
-
+position: absolute;
     max-width: 60px;
     max-height: 90px;
 }
