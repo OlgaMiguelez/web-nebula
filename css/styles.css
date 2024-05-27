@@ -192,12 +192,11 @@ nav ul li a:hover {
 .col-md-3product-item{
   display: flex;
   align-items: center;
-
 }
 .model-viewer{
 padding-left: 20px;
-  width: 400px; /* Puedes ajustar este valor */
- height: 500px; /* Puedes ajustar este valor */
+  width: 400px; 
+ height: 500px; 
 }
 
 .glass-container {
@@ -390,8 +389,8 @@ p{
 }
 
 .model-viewer{
-    width: 200px; /* Puedes ajustar este valor */
-   height: 300px; /* Puedes ajustar este valor */
+    width: 200px; 
+   height: 300px; 
   }
 
 

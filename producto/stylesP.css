@@ -8,18 +8,28 @@ color: white;
     
   }
 
-.producto{
+body{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(rgb(90, 248, 246), rgb(255, 132, 76), rgb(254, 217, 126));
+    background: linear-gradient(rgb(252, 55, 3), rgb(243, 67, 184), rgb(172, 218, 255));
    width: 100%;
    height: 100%;
 }
 
-.logo > img{
-    margin-top: 80px;
+header{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.volver{
+    text-decoration: none;
+}
+
+#mainMenu3 > img{
+    margin-top: 50px;
     margin-bottom: 3px;
     height: 120px;
     animation: MainTitleKeyframes 5s ease 2s infinite alternate;
@@ -29,40 +39,53 @@ color: white;
 h2{
     font-weight: 300;
 font-style: normal;
-font-size: 30px;
+font-size: 40px;
 margin: 0;
 }
 
 h4{
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size:25px;
     margin: 0; 
 }
 
 p{
     font-size: 1em;
     width: auto;
-    margin: 0;
+    margin-top: 3px;
 }
 
 
 #mainMenu3 {
+    position: relative; 
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     transition: left 1s;
+    
 }
 
 .zonabotones3{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin:10px;
 }
 
+.col-md-3.product-item {
+    position: relative; /* Necesario para el model-viewer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-viewer{
+position: absolute;
+    max-width: 60px;
+    max-height: 90px;
+}
 
 .menuButton {
     width: 210px;
@@ -77,7 +100,7 @@ p{
     border: 0.5px solid rgba(255, 255, 255, 0.275);
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.5s;
-    margin-bottom: 40px;
+    margin: 18px;
 }
 
 .menuButton:hover {
@@ -88,12 +111,12 @@ p{
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
 }
 
+
 .menuButtonfin > button{
-    text-decoration: none;
+
     width: 190px;
     height: 45px;
     margin-top: 30px;
-    margin-left: 320px;
     line-height: 40px;
     background: rgba(255, 255, 255, 0.106);
     border-radius: 16px;
@@ -112,3 +135,15 @@ p{
 .menuButtonfin > button:active {
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
 }
+
+.menuButtonfin> button> a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    font-family: "roc-grotesk", sans-serif;
+}
+
