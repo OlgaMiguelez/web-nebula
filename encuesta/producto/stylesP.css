@@ -27,11 +27,9 @@ header{
 }
 
 .volver{
-    text-decoration: none;
-    width: 60px;
-    height: 40px;
     display: flex;
     justify-content: flex-end;
+    width: 40px;
 }
 
 h2{
