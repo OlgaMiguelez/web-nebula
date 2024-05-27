@@ -1530,6 +1530,7 @@ function MainMenuSetup() {
         // ocultamos el primer menú y mostramos el segundo
         sonido.pause();
         question20.style.display = "none";
-        question1.style.display = "block";
+       window.location.href="./producto/Producto.html";
+
     }
 }
