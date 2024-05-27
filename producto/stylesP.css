@@ -58,11 +58,8 @@ p{
 
 
 #mainMenu3 {
-    position: relative; 
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     transition: left 1s;
     
 }
@@ -71,25 +68,23 @@ p{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin:10px;
+    margin: 10px;
 }
 
 .col-md-3.product-item {
-    position: relative; /* Necesario para el model-viewer */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .model-viewer{
-position: absolute;
-    max-width: 60px;
-    max-height: 90px;
+    width: 100px;
 }
 
-.menuButton {
+
+.menuButton{
     width: 210px;
-    height: 280px;
+    height: 230px;
     line-height: 40px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.106);
@@ -113,6 +108,7 @@ position: absolute;
 
 
 .menuButtonfin > button{
+
     width: 190px;
     height: 45px;
     margin-top: 30px;
