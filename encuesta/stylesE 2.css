@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "roc-grotesk", sans-serif;
+font-weight: 300;
+font-style: normal;
+color: white;
+text-align: center;
+display: flex;
+justify-content: center;
+  }
+
+
+  #video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+
+
+  #container {
+    position: relative;
+    width: 840px;
+    height: 680px;
+    margin: 40px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+/* Estilos tipo de pregunta 1: selección de imágenes*/
+
+.question-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left 1s;
+
+}
+
+.question-img > img{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    height: 120px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+   filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
+}
+
+.question-img> p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+
+.zonabotones{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.menuButton {
+    width: 190px;
+    height: 255px;
+    line-height: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.menuButton:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButton:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+.menuButtonReady {
+    width: 190px;
+    height: 45px;
+    margin-top: 30px;
+    margin-left: 320px;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.menuButtonReady:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButtonReady:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+/* Estilos tipo de pregunta 2: selección de audios*/
+.question-audio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left 1s;
+}
+.question-audio > img{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    height: 120px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
+}
+.question-audio> p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+
+}
+
+.zonabotones1{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+
+.menuButton1 {
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+
+
+.menuButton1:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButton1:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+/* Estilos tipo de pregunta 3: selección de palabras en base a un audio*/
+
+.question-palabras{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left 1s;
+}
+.question-palabras> img{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    height: 120px;
+    animation: MainTitleKeyframes 5s ease 2s infinite alternate;
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.218));
+}
+
+.question-palabras > p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+
+}
+
+.menuButtonA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 65px;
+    margin-left: 180px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 46px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.menuButtonA:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButtonA:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+.zonabotones2{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.menuButton2 {
+    width: 140px;
+    height: 35px;
+    margin-bottom: 9px;
+    line-height: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.106);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.275);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.5s;
+}
+
+.menuButton2:hover {
+    background-color: rgba(240, 239, 239, 0.611);
+}
+
+.menuButton2:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
