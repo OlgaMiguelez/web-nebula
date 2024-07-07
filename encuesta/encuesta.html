@@ -11,11 +11,33 @@
     <script src="./src/scriptE.js"></script>
     
 </head>
+<header>
+    <div class="menu">
+      <div class="logo">
+          <img src="img/logo_nebula.png" alt="Logo">
+      </div>
+      <div class="icono" id="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </div>
+    <div id="nav-container">
+      <nav class="nav" id="nav-list">
+          <ul class="nav-item">
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Log in</a></li>
+              <li><a href="#">Registrarse</a></li>
+          </ul>
+      </nav>
+      </div>
+  </div>
+  </header>
 <body>
 
     <div id="video-container">
         <video autoplay muted loop id="background-video">
-            <source src="img/backgroundWeb.mp4" type="video/mp4">
+            <source src="img/Galaxia.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -23,7 +45,7 @@
         <canvas id="myCanvas" width="640" height="480"></canvas>
        
         <div class="question-img" id="question1">
-            <img src="img/logo_nebula.png"></img>
+            
             <p>¿Cuál de estas imágenes consideras que representa tu carácter?</p>
             <div class="zonabotones">
                 <div class="menuButton" id="imagen">
