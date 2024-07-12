@@ -4,144 +4,98 @@ body, html {
     font-family: "roc-grotesk", sans-serif;
 font-weight: 300;
 font-style: normal;
-color: white;
+margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
     
   }
 
-  body{
+
+/* Menu*/
+.menu {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    background: linear-gradient(rgb(252, 55, 3), rgb(243, 67, 184), rgb(172, 218, 255));
-   width: 100%;
-   height: 100%;
-   margin: 0;
-   padding: 0;
-}
-
-header {
-    margin: 0;
-    width: 100%;
-    position: relative;
-}
-
-/* Estilo para el botón */
-
-#navigateButton {
-    display: flex;
-    justify-content: flex-start;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-
-}
-
-#navigateButton a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-#navigateButton:hover {
-    text-decoration: underline;
-}
-
-
-h2{
-    font-weight: 300;
-font-style: normal;
-font-size: 40px;
-margin: 0;
-}
-
-h4{
-    font-weight: 400;
-    font-style: normal;
-    font-size:25px;
-    margin: 0; 
-}
-
-p{
-    font-size: 1em;
-    width: auto;
-    margin-top: 3px;
-}
-.png{
+    justify-content: space-between;
     align-items: center;
-        max-width: 100%;
-        height: auto;
-        margin-top: 20px;
-        margin-bottom: 3px;
-        height: 240px;
-        animation: MainTitleKeyframes 5s ease 2s infinite alternate;
-        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.218));
-}
-.zonabotones3{
+  }
+  
+  header {
+    padding: 20px 0; 
+    color: #fff; 
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .icon > svg{
+    text-align: center;
+  }
+  
+  .icono{
+    display: none;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 10px;
+  }
+  
+  nav ul li {
+    margin-left: 30px; 
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0; 
+  }
+  
+  nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+  }
+  
+  nav ul li a:hover {
+    color:  rgb(114, 102, 255); 
+  }
+
+
+.indicators {
+    
+    bottom: 50px;
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }
 
-.menuButton{
-    width: 210px;
-    height: 240px;
-    line-height: 40px;
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color:  rgb(114, 102, 255);
+}
+
+
+.buy-button {
+    bottom: 0; 
+    left: 35%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #fff;
+    cursor: pointer;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.106);
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(1.5px);
-    border: 0.5px solid rgba(255, 255, 255, 0.275);
-    cursor: pointer;
-    transition: background-color 0.2s, box-shadow 0.5s;
-    margin: 18px;
-}
-
-.menuButton:hover {
-    background-color: rgba(240, 239, 239, 0.611);
-}
-
-.menuButton:active {
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
-}
-
-
-.menuButtonfin > button{
-
-    width: 190px;
-    height: 45px;
-    margin-top: 30px;
-    line-height: 40px;
-    background: rgba(255, 255, 255, 0.106);
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.665);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(1.5px);
-    border: 0.5px solid rgba(255, 255, 255, 0.275);
-    cursor: pointer;
-    transition: background-color 0.2s, box-shadow 0.5s;
-}
-
-.menuButtonfin > button:hover {
-    background-color: rgba(240, 239, 239, 0.611);
-}
-
-.menuButtonfin > button:active {
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
-}
-
-.menuButtonfin> button> a{
-    text-decoration: none;
-    color: white;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    font-family: "roc-grotesk", sans-serif;
+    text-align: center;
 }

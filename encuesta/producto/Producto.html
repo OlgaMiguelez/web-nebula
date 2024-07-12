@@ -7,39 +7,65 @@
   <link rel="stylesheet" href="stylesP.css">
   <link rel="stylesheet" href="https://use.typekit.net/esa0toj.css">
 </head>
-<header>
-        <div class="Volver">
-            <button id="navigateButton"> <a href="../../Index.html">Volver</a></button>
-        </div>
-</header>
+
 <body>
-    
-    <div id="mainMenu3">
-        <img src="img/logo_nebula.png" alt="Logo">
-        <h2>Infinitely yours</h2>
-        <h4>¡Gracias por confiar en Nébula!</h4>
-        <p>En base a tus respuestas, estas son tres fragancias exclusivas creadas especialmente para ti.</p>
-        <div class="zonabotones3">
-            <div class="menuButton" id="perfume">
-                <img class="png" src="img/perfume.png"></img>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <img src="img/logo_nebula.png" alt="Logo">
             </div>
-
-            <div class="menuButton" id="perfume">
-                <img class="png" src="img/perfume2.png"></img>
+            <div class="icono" id="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
             </div>
-            
-            <div class="menuButton" id="perfume">
-                <img class="png" src="img/perfume3.png"></img>
-            </div>
-
+            <div id="nav-container">
+                <nav class="nav" id="nav-list">
+                    <ul class="nav-item">
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Registrarse</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <div class="menuButtonfin" id="final">
-            <button> <a href="#"> Comprar</a></button>
+    </header>
+<body>
+    <div class="container">
+        <div class="carousel" id="carousel">
+            <div class="carousel-text" id="carousel-text">
+                <div class="Texto active">
+                    <h3>#65334</h3>
+                    <p>Este perfume ha sido creado especialmente para ti con una frescura cítrica y revitalizante, que evoca la energía de una mañana soleada. Su aroma se despliega con notas vibrantes y refrescantes que aportan una sensación de vitalidad y alegría, seguido de un toque suave y verde que añade serenidad y equilibrio. Ideal para aquellos que buscan comenzar el día con una dosis de frescura y claridad.</p>
+                </div>
+                <div class="Texto">
+                    <h3>#668022</h3>
+                    <p>Este perfume ha sido creado especialmente para ti con una mezcla cálida y envolvente que recuerda a un acogedor atardecer. Desde el primer momento, sentirás un abrazo suave y dulce que transmite calma y confort, evolucionando hacia un fondo ligeramente especiado que añade un toque de misterio y profundidad. Perfecto para quienes desean un aroma reconfortante y sofisticado.</p>
+                </div>
+                <div class="Texto">
+                    <h3>#449890</h3>
+                    <p>Este perfume ha sido creado especialmente para ti con una esencia floral delicada y elegante que captura la belleza de un jardín en plena floración. Las primeras impresiones son suaves y frescas, como pétalos acariciados por la brisa, seguidas de una profundidad aterciopelada que aporta una sofisticación sutil. Ideal para aquellos que buscan un aroma refinado y atemporal.</p>
+                </div>
+            </div>
+            <div class="carousel-image" id="carousel-image">
+                <img class="img active" src="img/perfume.png" alt="Imagen 1">
+                <img class="img" src="img/perfume2.png" alt="Imagen 2">
+                <img class="img" src="img/perfume3.png" alt="Imagen 3">
+            </div>
+            <div class="indicators">
+                <span class="indicator" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+            <button class="buy-button">Comprar</button>
         </div>
+        <div class="fixed-text">
+            <h2>Infinitely yours</h2>
+            <p>Nébula ofrece perfumes personalizados que combinan la perfumería tradicional con las nuevas tecnologías. Inspirado en las nebulosas del espacio, mediante una encuesta sensorial y una avanzada inteligencia artificial para crear fragancias únicas en base a la personalidad. Diseñado para aquellas personas que buscan expresar su identidad a través de los olores, brindándoles una experiencia olfativa profundamente personal y evocadora.</p>
         </div>
     </div>
 
+    <script src="scriptP.js"></script>
 </body>
 </html>
- 
