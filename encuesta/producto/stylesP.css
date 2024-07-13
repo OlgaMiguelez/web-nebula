@@ -65,37 +65,122 @@ margin: 0;
   }
 
 
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.column-left, .column-center, .column-right {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-left {
+    max-width: 30%;
+    text-align: center;
+}
+
+.column-center {
+    max-width: 40%;
+    text-align: center;
+}
+
+.column-right {
+    display: block;
+    max-width: 30%;
+    text-align: center;
+}
+
+.carousel {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-text h3{
+    font-size: 32px; 
+}
+
+.carousel-text {
+    text-align: left;
+    font-size: 12px; 
+}
+
+.carousel-text div {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.carousel-text div.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.carousel-text h3, .carousel-text p, .fixed-text h2, .fixed-text p {
+    font-weight: normal; 
+}
+
+
+.carousel-image img {
+    display: none;
+    max-width: 500px;
+    max-height: auto;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.carousel-image img.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.fixed-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px; 
+}
+
+.fixed-text h2{
+    font-size: 32px; 
+}
+
 .indicators {
-    
-    bottom: 50px;
-    left: 35%;
-    transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    margin-top: 25px;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.327);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color:  rgb(114, 102, 255);
+    background-color:  rgb(114, 102, 255); ;
 }
 
-
 .buy-button {
-    bottom: 0; 
-    left: 35%;
-    transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 2em; 
+    color: #ffffff;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
+    margin-top: 20px;
 }
