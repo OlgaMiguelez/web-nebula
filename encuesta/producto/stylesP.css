@@ -94,7 +94,7 @@ margin: 0;
 
 .column-right {
     display: block;
-    max-width: 30%;
+    max-width: 45%;
     text-align: center;
 }
 
@@ -117,13 +117,11 @@ margin: 0;
 
 .carousel-text div {
     display: none;
-    opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
 
 .carousel-text div.active {
     display: block;
-    opacity: 1;
     transform: scale(1.05);
 }
 
@@ -136,13 +134,11 @@ margin: 0;
     display: none;
     max-width: 500px;
     max-height: auto;
-    opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
 }
 
 .carousel-image img.active {
     display: block;
-    opacity: 1;
     transform: scale(1.05);
 }
 
@@ -171,7 +167,7 @@ margin: 0;
 }
 
 .indicator.active {
-    background-color:  rgb(114, 102, 255); ;
+    background-color:  rgb(114, 102, 255);
 }
 
 .buy-button {
@@ -183,4 +179,9 @@ margin: 0;
     border-radius: 20px;
     text-align: center;
     margin-top: 20px;
+}
+
+.buy-button:hover{
+    color:  rgb(114, 102, 255);
+    border-color: rgb(114, 102, 255);
 }
